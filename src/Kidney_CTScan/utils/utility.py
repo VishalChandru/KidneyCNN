@@ -8,8 +8,8 @@ from box import ConfigBox
 from typing import Any
 from ensure import ensure_annotations
 import base64
-from src.Kidney_CTScan import logger
-from src.Kidney_CTScan import CustomException
+from Kidney_CTScan import logger
+from Kidney_CTScan import CustomException
 
 
 @ensure_annotations

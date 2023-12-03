@@ -1,7 +1,7 @@
-from src.Kidney_CTScan.config.configuration import ConfigurationManager 
-from src.Kidney_CTScan.components.data_ingestion import DataIngestion
-from src.Kidney_CTScan import CustomException
-from src.Kidney_CTScan import logger
+from Kidney_CTScan.config.configuration import ConfigurationManager 
+from Kidney_CTScan.components.data_ingestion import DataIngestion
+from Kidney_CTScan import CustomException
+from Kidney_CTScan import logger
 import sys
 
 STAGE_NAME = "Data Ingestion stage"
@@ -22,7 +22,7 @@ if __name__ == '__main__':
         logger.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<<")
         obj = DataIngestionTrainingPipeline()
         obj.main()
-        logger.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<<\n\nx============x")
+        logger.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<<\n\nx============x\n\n")
     except Exception as e:
             logger.exception(e)
             raise CustomException(e,sys)

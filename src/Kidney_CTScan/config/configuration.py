@@ -1,8 +1,8 @@
-from src.Kidney_CTScan.utils.utility import read_yaml,create_directories
+from Kidney_CTScan.utils.utility import read_yaml,create_directories
 from pathlib import Path
 import os
-from src.Kidney_CTScan.constants import *
-from src.Kidney_CTScan.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig, ModelEvaluationConfig
+from Kidney_CTScan.constants import *
+from Kidney_CTScan.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig, ModelEvaluationConfig
 
 
 class ConfigurationManager():

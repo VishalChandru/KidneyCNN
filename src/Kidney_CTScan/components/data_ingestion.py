@@ -2,10 +2,10 @@ import os
 import zipfile
 import sys
 import gdown
-from src.Kidney_CTScan import logger
-from src.Kidney_CTScan.utils.utility import get_size
-from src.Kidney_CTScan import CustomException
-from src.Kidney_CTScan.entity.config_entity import DataIngestionConfig
+from Kidney_CTScan import logger
+from Kidney_CTScan.utils.utility import get_size
+from Kidney_CTScan import CustomException
+from Kidney_CTScan.entity.config_entity import DataIngestionConfig
 
 
 class DataIngestion:
