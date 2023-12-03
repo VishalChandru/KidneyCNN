@@ -2,7 +2,7 @@ from src.Kidney_CTScan.utils.utility import read_yaml,create_directories
 from pathlib import Path
 import os
 from src.Kidney_CTScan.constants import *
-from src.Kidney_CTScan.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig
+from src.Kidney_CTScan.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig, ModelEvaluationConfig
 
 
 class ConfigurationManager():
@@ -71,3 +71,14 @@ class ConfigurationManager():
                                 )
         
         return training_config
+    
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        model_evaluation_config = ModelEvaluationConfig(
+                                    path_of_model='artifacts/model_training/model.h5',
+                                    training_data='artifacts/data_ingestion/KidneyCTScan',
+                                    mlflow_uri='https://dagshub.com/VishalChandru/KidneyCNN.mlflow',
+                                    all_param=self.params,
+                                    params_image_size=self.params.IMAGE_SIZE,
+                                    params_batch_size=self.params.BATCH_SIZE
+                                    )
+        return model_evaluation_config

@@ -34,3 +34,29 @@ conda activate venv
 ```bash
 pip install -r requirements.txt
 ```
+
+
+# MLFlow
+[Documentation](https://mlflow.org/docs/latest/index.html)
+
+##### cmd
+- mlflow ui
+
+### dagshub
+[dagshub](https://dagshub.com/)
+
+MLFLOW_TRACKING_URI=https://dagshub.com/VishalChandru/KidneyCNN.mlflow \
+MLFLOW_TRACKING_USERNAME=VishalChandru \
+MLFLOW_TRACKING_PASSWORD=db7fb84a8a680ae7d4b6ee54f6ad4bf9e542dc0f \
+python script.py
+
+Run this to export as env variables:
+
+```bash
+export MLFLOW_TRACKING_URI=https://dagshub.com/VishalChandru/KidneyCNN.mlflow
+
+export MLFLOW_TRACKING_USERNAME=VishalChandru
+
+export MLFLOW_TRACKING_PASSWORD=db7fb84a8a680ae7d4b6ee54f6ad4bf9e542dc0f
+```
+
