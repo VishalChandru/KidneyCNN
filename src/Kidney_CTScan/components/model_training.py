@@ -5,6 +5,7 @@ from pathlib import Path
 import os
 from zipfile import ZipFile
 import time
+import shutil
 
 
 
@@ -74,8 +75,17 @@ class Training:
             path = self.config.trained_model_path,
             model = self.model
         )
+
+        self.copy_model(
+            src_path= self.config.trained_model_path,
+            dest_path= self.config.copy_path
+        )
     
     @staticmethod
     def save_model(path: Path, model: tf.keras.Model):
         model.save(path)
+    
+    @staticmethod
+    def copy_model(src_path: Path, dest_path: Path):
+        shutil.copy2(src_path, dest_path)
     

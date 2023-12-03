@@ -59,9 +59,12 @@ class ConfigurationManager():
 
         create_directories([Path(training_config.root_dir)])
 
+        create_directories([Path(training_config.copy_path)])
+
         training_config = TrainingConfig(
                                     root_dir = Path(training_config.root_dir),
                                     trained_model_path = Path(training_config.trained_model_path),
+                                    copy_path = Path(training_config.copy_path),
                                     updated_base_model_path = Path(prepare_base_model_config.updated_base_model_path),
                                     training_data = Path(training_data),
                                     params_epochs = params.EPOCHS,
